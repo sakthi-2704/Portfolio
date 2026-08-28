@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>K. Sakthi Darshan — Electronics Engineer</title>
+<title>Sakthi Darshan K — Electronics Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
@@ -554,7 +554,7 @@
     <div class="logo">KSD</div>
     <div class="status-chips">
       <div class="chip"><div class="dot"></div><span>SYS:RDY</span></div>
-      <div class="chip"><div class="dot amber"></div><span>B.TECH:2026</span></div>
+      <div class="chip"><div class="dot"></div><span>B.TECH:2026</span></div>
       <div class="chip"><div class="dot"></div><span>FPGA:ACTIVE</span></div>
     </div>
     <nav>
@@ -568,7 +568,7 @@
 
   <!-- ═══ HERO ═══ -->
   <section id="hero">
-    <div class="hero-tag">ECE FINAL YEAR · VIT VELLORE · CLASS OF 2026</div>
+    <div class="hero-tag">B.TECH GRADUATE · VIT VELLORE · CLASS OF 2026</div>
     <h1 class="hero-name">K. SAKTHI<br>DARSHAN</h1>
     <div class="hero-sub">HARDWARE &amp; EMBEDDED ENGINEER</div>
     <p class="hero-desc">
@@ -596,7 +596,7 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          I'm a final-year Electronics &amp; Communication Engineering student at
+          I'm an Electronics &amp; Communication Engineering graduate from
           VIT Vellore, focused on low-level hardware design and intelligent edge
           computing. My work spans RTL simulation, FPGA prototyping, approximate
           computing, and CNN hardware acceleration.
@@ -637,23 +637,24 @@
 
       <div class="project-card">
   <div class="project-meta">
-    <span class="project-id">EXP-001 · MAY 2026–PRESENT</span>
-    <span class="project-badge ongoing">ACTIVE</span>
+    <span class="project-id">EXP-001 · MAY 2026–AUG 2026</span>
+    <span class="project-badge">COMPLETE</span>
   </div>
   <div class="project-title">Embedded Systems & Edge-AI Engineering Intern — NURA Electric Mobility</div>
-  <div class="project-highlight">Spearheading transition from third-party SaaS to proprietary headless Edge-AI Driver Monitoring System, eliminating platform dependencies.</div>
-  <div class="project-highlight">Multi-threaded pipeline combining MediaPipe Face Mesh (25 FPS) and YOLO11-nano with INT8 quantization to mitigate CPU thermal throttling.</div>
-  <div class="project-highlight">Stop-and-Wait ARQ protocol over SQLite Outbox queue ensuring zero telematics data loss across 4G LTE handovers.</div>
-  <div class="project-highlight">Linux tmpfs RAM disk buffer reducing MicroSD write wear by 90%.</div>
+  <div class="project-highlight">Spearheaded transition from third-party SaaS to proprietary headless Edge-AI Driver Monitoring System, eliminating platform dependencies.</div>
+  <div class="project-highlight">Engineered a real-time driver monitoring pipeline on a Raspberry Pi 4 (picamera2 + hardware-accelerated H.264), integrating MediaPipe FaceMesh-based fatigue detection with frame-skipping to sustain real-time performance on embedded hardware.</div>
+  <div class="project-highlight">Designed and validated the ESP32-S3 sensor/actuator subsystem — ignition sensing, relay power gating, buzzer alerting, GPS/geofence abandonment detection — bridged to the Pi over a non-blocking UART link.</div>
+  <div class="project-highlight">Built a SQLite-backed retry queue (outbox pattern) guaranteeing zero telemetry/evidence loss across intermittent 4G, and diagnosed a silent fatigue-alert delivery bug.</div>
+  <div class="project-highlight">Led the architecture pivot to a backend-offloaded capture-unit model — redesigning the hardware BOM and specifying a three-channel MQTT/HTTPS/RTMP protocol to cut per-unit cost and improve fleet scalability.</div>
   <div class="tag-row">
     <span class="tag">Edge-AI</span>
     <span class="tag">Raspberry Pi</span>
+    <span class="tag">ESP32-S3</span>
     <span class="tag">MediaPipe</span>
-    <span class="tag">YOLO11</span>
-    <span class="tag">INT8 QAT</span>
     <span class="tag">SQLite</span>
-    <span class="tag">Linux</span>
-    <span class="tag">I2C</span>
+    <span class="tag">UART</span>
+    <span class="tag">MQTT</span>
+    <span class="tag">System Architecture</span>
   </div>
 </div>
 
@@ -679,19 +680,21 @@
       <div class="project-card">
         <div class="project-meta">
           <span class="project-id">PRJ-002 · AUG 2025–APR 2026</span>
-          <span class="project-badge ">COMPLETE</span>
+          <span class="project-badge">COMPLETE</span>
         </div>
-        <div class="project-title">FPGA-based Accelerator for Deepfake Image Detection</div>
-        <div class="project-highlight">Dual-Stream Spatial-Frequency Fusion Network (SFFN) jointly learning spatial texture anomalies &amp; high-frequency GAN fingerprints.</div>
-        <div class="project-highlight">QAT compressed model from 19.85 MB → 6.62 MB (INT8), 3× ratio, AUC-ROC: 0.9984. "Real" class recall improved from 0.82 to 0.94.</div>
-        <div class="project-highlight">Hardware-software co-design with OpenCL &amp; TensorRT for real-time edge deployment.</div>
+        <div class="project-title">Spatial-Frequency Fusion Network for Edge-Deployable Deepfake Detection</div>
+        <div class="project-highlight">Dual-stream architecture fusing EfficientNet-B0 with a 2D-DFT frequency CNN to isolate GAN fingerprints — ROC-AUC of 0.9953 on Celeb-DF v2 with 5.39M parameters and 0.51 GFLOPs.</div>
+        <div class="project-highlight">Applied Quantization-Aware Training (QAT) via Intel NNCF to compress the network 3× (19.85 MB to 6.62 MB INT8), recovering 12% Real Recall over standard PTQ and hitting 498.99 FPS via Intel OpenVINO™.</div>
+        <div class="project-highlight">Achieved a Forensic Efficiency Coefficient (η) of 1.951, outperforming baseline Vision Transformers by 38×.</div>
         <div class="tag-row">
+          <span class="tag">PyTorch</span>
+          <span class="tag">EfficientNet-B0</span>
+          <span class="tag">2D DFT</span>
+          <span class="tag">QAT</span>
+          <span class="tag">OpenVINO</span>
           <span class="tag">Verilog HDL</span>
-          <span class="tag">SystemVerilog</span>
           <span class="tag">FPGA</span>
-          <span class="tag">PyTorch QAT</span>
-          <span class="tag">OpenCL</span>
-          <span class="tag">TensorRT</span>
+
         </div>
       </div>
 
@@ -893,7 +896,7 @@
     { text: '[NET]  LinkedIn interface............... ONLINE', cls: 'ok', delay: 1300 },
     { text: '[NET]  GitHub repository................ ONLINE', cls: 'ok', delay: 1420 },
     { text: '[SYS]  CGPA register: 0x07440x0A00', cls: 'dim', delay: 1560 },
-    { text: '[SYS]  Deepfake detector AUC-ROC: 0.9984', cls: 'ok', delay: 1700 },
+    { text: '[SYS]  Deepfake detector ROC-AUC: 0.9953', cls: 'ok', delay: 1700 },
     { text: '[SYS]  Approximate multiplier Δpower: -35%', cls: 'ok', delay: 1840 },
     { text: '[SYS]  Deepfake detector: SUBMITTED FOR PUBLICATION', cls: 'ok', delay: 1980 },
     { text: '─────────────────────────────────────────────', cls: 'dim', delay: 2100 },
